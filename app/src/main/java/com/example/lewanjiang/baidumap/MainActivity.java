@@ -4,10 +4,12 @@ import android.Manifest;
 import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.location.Location;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -47,6 +49,7 @@ public class MainActivity extends Activity {
 
         MapStatusUpdate update = MapStatusUpdateFactory.zoomTo(16.f);
         baiduMap.animateMapStatus(update);
+        mapView.getChildAt(2).setPadding(0,0,30,500);
 
         mLocationClient = new LocationClient(getApplicationContext());
         mLocationClient.registerLocationListener( myListener );
@@ -65,6 +68,14 @@ public class MainActivity extends Activity {
             ActivityCompat.requestPermissions(MainActivity.this,permissions,1);
         } else
             requestLocation();
+
+        FloatingActionButton fab=(FloatingActionButton)findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this,"FAB clicked",Toast.LENGTH_LONG).show();
+            }
+        });
     }
 
     private void requestLocation(){
