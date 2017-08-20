@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    tools:context="com.example.lewanjiang.baidumap.MineActivity">
+
+    <Button
+        android:id="@+id/but1"
+        android:text="全国禁摩地图"
+        android:textSize="20sp"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/but2"
+        android:text="摩友论坛"
+        android:textSize="20sp"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/but3"
+        android:text="摩托测试视频"
+        android:textSize="20sp"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/but4"
+        android:text="关于"
+        android:textSize="20sp"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+    <Button
+        android:id="@+id/but5"
+        android:text="版本"
+        android:textSize="20sp"
+        android:background="@drawable/shape_button"
+        android:gravity="center"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+
+</LinearLayout>
