@@ -2,15 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.lewanjiang.baidumap">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
 
     <application
@@ -24,7 +24,8 @@
             android:name="com.baidu.lbsapi.API_KEY"
             android:value="4cK8pQ9E49wrycgIRl2blSxCtxGFGdAE" />
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -37,7 +38,8 @@
             android:enabled="true"
             android:process=":remote" />
 
-        <activity android:name=".BroswerActivity">
+        <activity android:name=".BroswerActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
 
@@ -46,11 +48,16 @@
                 <data android:scheme="http" />
             </intent-filter>
         </activity>
-        <activity android:name=".MineActivity" />
-        <activity android:name=".ForumActivity" />
-        <activity android:name=".VideoActivity" />
-        <activity android:name=".AboutActivity" />
-        <activity android:name=".VersionActivity"></activity>
+        <activity android:name=".MineActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ForumActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VideoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".AboutActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".VersionActivity"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>
